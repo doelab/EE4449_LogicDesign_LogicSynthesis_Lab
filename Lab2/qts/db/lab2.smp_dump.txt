@@ -1,0 +1,6 @@
+
+State Machine - |ChipInterface|MyFSM:dut|curState
+Name curState.INIT curState.DONE curState.START 
+curState.INIT 0 0 0 
+curState.START 1 0 1 
+curState.DONE 1 1 0 

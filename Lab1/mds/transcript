@@ -1,0 +1,41 @@
+# Compile of bcdtohex.sv was successful.
+# Compile of downstream.sv was successful.
+# Compile of p1.sv was successful.
+# Compile of sumitup.sv was successful.
+# Compile of p1swtb.sv was successful.
+# Compile of p1hwtb.sv was successful.
+# 6 compiles, 0 failed with no errors.
+vsim work.p1swtb -novopt
+# vsim work.p1swtb -novopt 
+# Start time: 16:11:20 on Sep 04,2023
+# ** Error (suppressible): (vsim-12110) All optimizations are disabled because the -novopt option is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features, please see the User's Manual section on Preserving Object Visibility with vopt. -novopt option is now deprecated and will be removed in future releases.
+# Error loading design
+# End time: 16:11:20 on Sep 04,2023, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 4
+vsim -vopt work.p1swtb -voptargs=+acc
+# vsim -vopt work.p1swtb -voptargs="+acc" 
+# Start time: 16:11:30 on Sep 04,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.p1swtb(fast)
+# Loading work.p1(fast)
+# Loading work.p1hwtb(fast)
+# Loading work.downstream(fast)
+# Loading work.sumitup(fast)
+# Loading work.bcdtohex(fast)
+run -all
+# Start testbench
+# LED0 = x
+# LED0 = 1
+# LED0 = 0
+# LED0 = 1
+# Testbench finished, Check the output on Waveform
+# If it is good, you should see at least two times that LED0 = 1
+# 1 is when the testbench begins, 2 is when the testbench ends
+# LED0 = 0
+# ** Note: $finish    : I:/Keccak/KTSNCLab/Lab1/p1swtb.sv(44)
+#    Time: 11200 ps  Iteration: 0  Instance: /p1swtb
+# 1
+# Break in Module p1swtb at I:/Keccak/KTSNCLab/Lab1/p1swtb.sv line 44
+# End time: 16:16:26 on Sep 04,2023, Elapsed time: 0:04:56
+# Errors: 0, Warnings: 1

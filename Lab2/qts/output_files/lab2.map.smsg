@@ -1,0 +1,9 @@
+Info (10281): Verilog HDL Declaration information at p2.sv(668): object "done" differs only in case from object "DONE" in the same scope File: I:/Keccak/KTSNCLab/Lab2/p2.sv Line: 668
+Info (10281): Verilog HDL Declaration information at matrix_multiply.sv(9): object "HEX0" differs only in case from object "hex0" in the same scope File: I:/Keccak/KTSNCLab/Lab2/matrix_multiply.sv Line: 9
+Info (10281): Verilog HDL Declaration information at matrix_multiply.sv(9): object "HEX1" differs only in case from object "hex1" in the same scope File: I:/Keccak/KTSNCLab/Lab2/matrix_multiply.sv Line: 9
+Info (10281): Verilog HDL Declaration information at matrix_multiply.sv(9): object "HEX2" differs only in case from object "hex2" in the same scope File: I:/Keccak/KTSNCLab/Lab2/matrix_multiply.sv Line: 9
+Info (10281): Verilog HDL Declaration information at matrix_multiply.sv(9): object "HEX3" differs only in case from object "hex3" in the same scope File: I:/Keccak/KTSNCLab/Lab2/matrix_multiply.sv Line: 9
+Info (10281): Verilog HDL Declaration information at matrix_multiply.sv(9): object "HEX4" differs only in case from object "hex4" in the same scope File: I:/Keccak/KTSNCLab/Lab2/matrix_multiply.sv Line: 9
+Info (10281): Verilog HDL Declaration information at matrix_multiply.sv(9): object "HEX5" differs only in case from object "hex5" in the same scope File: I:/Keccak/KTSNCLab/Lab2/matrix_multiply.sv Line: 9
+Warning (10273): Verilog HDL warning at library.sv(198): extended using "x" or "z" File: I:/Keccak/KTSNCLab/Lab2/library.sv Line: 198
+Warning (10273): Verilog HDL warning at library.sv(220): extended using "x" or "z" File: I:/Keccak/KTSNCLab/Lab2/library.sv Line: 220

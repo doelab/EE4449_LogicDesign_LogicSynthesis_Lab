@@ -1,0 +1,44 @@
+I:/Keccak/KTSNCLab/Lab1/p1hwtb.sv {1 {vlog -work work -vopt -sv -stats=none I:/Keccak/KTSNCLab/Lab1/p1hwtb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module p1hwtb
+
+Top level modules:
+	p1hwtb
+
+} {} {}} I:/Keccak/KTSNCLab/Lab1/sumitup.sv {1 {vlog -work work -vopt -sv -stats=none I:/Keccak/KTSNCLab/Lab1/sumitup.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module sumitup
+
+Top level modules:
+	sumitup
+
+} {} {}} I:/Keccak/KTSNCLab/Lab1/downstream.sv {1 {vlog -work work -vopt -sv -stats=none I:/Keccak/KTSNCLab/Lab1/downstream.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module downstream
+
+Top level modules:
+	downstream
+
+} {} {}} I:/Keccak/KTSNCLab/Lab1/p1swtb.sv {1 {vlog -work work -vopt -sv -stats=none I:/Keccak/KTSNCLab/Lab1/p1swtb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module p1swtb
+
+Top level modules:
+	p1swtb
+
+} {} {}} I:/Keccak/KTSNCLab/Lab1/bcdtohex.sv {1 {vlog -work work -vopt -sv -stats=none I:/Keccak/KTSNCLab/Lab1/bcdtohex.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module bcdtohex
+-- Compiling module BCDtoSevenSegmentTest
+
+Top level modules:
+	BCDtoSevenSegmentTest
+
+} {} {}} I:/Keccak/KTSNCLab/Lab1/p1.sv {1 {vlog -work work -vopt -sv -stats=none I:/Keccak/KTSNCLab/Lab1/p1.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module p1
+
+Top level modules:
+	p1
+
+} {} {}}

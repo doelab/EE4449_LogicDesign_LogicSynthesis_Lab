@@ -1,0 +1,561 @@
+I:/Keccak/KTSNCLab/Lab2/library.sv {1 {vlog -work work -vopt -sv -stats=none I:/Keccak/KTSNCLab/Lab2/library.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module MagComp
+-- Compiling module Adder
+-- Compiling module Multiplexer
+-- Compiling module Mux2to1
+-- Compiling module Decoder
+-- Compiling module Register
+-- Compiling module BCDtoSevenSegment
+-- Compiling module SevenSegmentDigit
+-- Compiling module SevenSegmentControl
+-- Compiling module Counter
+-- Compiling module CounterFromD
+-- Compiling module Demux
+-- Compiling module Mux8to1
+-- Compiling module Mux4to1
+
+Top level modules:
+	MagComp
+	Adder
+	Multiplexer
+	Mux2to1
+	Decoder
+	Register
+	SevenSegmentControl
+	Counter
+	CounterFromD
+	Demux
+	Mux8to1
+	Mux4to1
+
+} {} {}} I:/Keccak/KTSNCLab/Lab2/TB.sv {1 {vlog -work work -vopt -sv -stats=none I:/Keccak/KTSNCLab/Lab2/TB.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module TB
+
+Top level modules:
+	TB
+
+} {} {}} I:/Keccak/KTSNCLab/Lab2/simlib/altera_mf.v {1 {vlog -work work -vopt -stats=none I:/Keccak/KTSNCLab/Lab2/simlib/altera_mf.v
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module lcell
+-- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
+-- Compiling module ALTERA_MF_HINT_EVALUATION
+-- Compiling module ALTERA_DEVICE_FAMILIES
+-- Compiling module dffp
+-- Compiling module pll_iobuf
+-- Compiling module stx_m_cntr
+-- Compiling module stx_n_cntr
+-- Compiling module stx_scale_cntr
+-- Compiling module MF_pll_reg
+-- Compiling module MF_stratix_pll
+-- Compiling module arm_m_cntr
+-- Compiling module arm_n_cntr
+-- Compiling module arm_scale_cntr
+-- Compiling module MF_stratixii_pll
+-- Compiling module ttn_m_cntr
+-- Compiling module ttn_n_cntr
+-- Compiling module ttn_scale_cntr
+-- Compiling module MF_stratixiii_pll
+-- Compiling module cda_m_cntr
+-- Compiling module cda_n_cntr
+-- Compiling module cda_scale_cntr
+-- Compiling module MF_cycloneiii_pll
+-- Compiling module MF_cycloneiiigl_m_cntr
+-- Compiling module MF_cycloneiiigl_n_cntr
+-- Compiling module MF_cycloneiiigl_scale_cntr
+-- Compiling module cycloneiiigl_post_divider
+-- Compiling module MF_cycloneiiigl_pll
+-- Compiling module altpll
+-- Compiling module altlvds_rx
+-- Compiling module stratix_lvds_rx
+-- Compiling module stratixgx_dpa_lvds_rx
+-- Compiling module stratixii_lvds_rx
+-- Compiling module flexible_lvds_rx
+-- Compiling module stratixiii_lvds_rx
+-- Compiling module stratixiii_lvds_rx_channel
+-- Compiling module stratixiii_lvds_rx_dpa
+-- Compiling module altlvds_tx
+-- Compiling module stratixv_local_clk_divider
+-- Compiling module stratix_tx_outclk
+-- Compiling module stratixii_tx_outclk
+-- Compiling module flexible_lvds_tx
+-- Compiling module dcfifo_dffpipe
+-- Compiling module dcfifo_fefifo
+-- Compiling module dcfifo_async
+-- Compiling module dcfifo_sync
+-- Compiling module dcfifo_low_latency
+-- Compiling module dcfifo_mixed_widths
+-- Compiling module dcfifo
+-- Compiling module altera_syncram_derived
+-- Compiling module altera_syncram_derived_forwarding_logic
+-- Compiling module altaccumulate
+-- Compiling module altmult_accum
+-- Compiling module altmult_add
+-- Compiling module altfp_mult
+-- Compiling module altsqrt
+-- Compiling module altclklock
+-- Compiling module altddio_in
+-- Compiling module altddio_out
+-- Compiling module altddio_bidir
+-- Compiling module altdpram
+-- Compiling module altsyncram
+-- Compiling module altsyncram_body
+-- Compiling module alt3pram
+-- Compiling module parallel_add
+-- Compiling module scfifo
+-- Compiling module altshift_taps
+-- Compiling module a_graycounter
+-- Compiling module altsquare
+-- Compiling module altera_std_synchronizer
+-- Compiling module altera_std_synchronizer_bundle
+-- Compiling module alt_cal
+-- Compiling module alt_cal_mm
+-- Compiling module alt_cal_c3gxb
+-- Compiling module alt_cal_sv
+-- Compiling module alt_cal_av
+-- Compiling module alt_aeq_s4
+-- Compiling module alt_eyemon
+-- Compiling module alt_dfe
+-- Compiling module signal_gen
+-- Compiling module jtag_tap_controller
+-- Compiling module dummy_hub
+-- Compiling module sld_virtual_jtag
+-- Compiling module sld_signaltap
+-- Compiling module altstratixii_oct
+-- Compiling module altparallel_flash_loader
+-- Compiling module altserial_flash_loader
+-- Compiling module alt_fault_injection
+-- Compiling module sld_virtual_jtag_basic
+-- Compiling module altsource_probe
+
+Top level modules:
+	lcell
+	altpll
+	altlvds_rx
+	altlvds_tx
+	dcfifo
+	altaccumulate
+	altmult_accum
+	altmult_add
+	altfp_mult
+	altsqrt
+	altclklock
+	altddio_bidir
+	altdpram
+	alt3pram
+	parallel_add
+	scfifo
+	altshift_taps
+	a_graycounter
+	altsquare
+	altera_std_synchronizer_bundle
+	alt_cal
+	alt_cal_mm
+	alt_cal_c3gxb
+	alt_cal_sv
+	alt_cal_av
+	alt_aeq_s4
+	alt_eyemon
+	alt_dfe
+	sld_virtual_jtag
+	sld_signaltap
+	altstratixii_oct
+	altparallel_flash_loader
+	altserial_flash_loader
+	alt_fault_injection
+	sld_virtual_jtag_basic
+	altsource_probe
+
+} {} {}} I:/Keccak/KTSNCLab/Lab2/romB_128x1.v {1 {vlog -work work -vopt -stats=none I:/Keccak/KTSNCLab/Lab2/romB_128x1.v
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module romB_128x1
+
+Top level modules:
+	romB_128x1
+
+} {} {}} I:/Keccak/KTSNCLab/Lab2/simlib/altera_primitives.v {1 {vlog -work work -vopt -stats=none I:/Keccak/KTSNCLab/Lab2/simlib/altera_primitives.v
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module global
+-- Compiling module carry
+-- Compiling module cascade
+-- Compiling module carry_sum
+-- Compiling module exp
+-- Compiling module soft
+-- Compiling module opndrn
+-- Compiling module row_global
+-- Compiling module TRI
+-- Compiling module lut_input
+-- Compiling module lut_output
+-- Compiling module latch
+-- Compiling module dlatch
+-- Compiling module prim_gdff
+-- Compiling module dff
+-- Compiling module dffe
+-- Compiling module dffea
+-- Compiling module dffeas
+-- Compiling module dffeas_pr
+-- Compiling module prim_gtff
+-- Compiling module tff
+-- Compiling module tffe
+-- Compiling module prim_gjkff
+-- Compiling module jkff
+-- Compiling module jkffe
+-- Compiling module prim_gsrff
+-- Compiling module srff
+-- Compiling module srffe
+-- Compiling module clklock
+-- Compiling module alt_inbuf
+-- Compiling module alt_outbuf
+-- Compiling module alt_outbuf_tri
+-- Compiling module alt_iobuf
+-- Compiling module alt_inbuf_diff
+-- Compiling module alt_outbuf_diff
+-- Compiling module alt_outbuf_tri_diff
+-- Compiling module alt_iobuf_diff
+-- Compiling module alt_bidir_diff
+-- Compiling module alt_bidir_buf
+-- Compiling UDP PRIM_GDFF_LOW
+-- Compiling UDP PRIM_GDFF_LOW_SCLR_PRIORITY
+-- Compiling UDP PRIM_GDFF_HIGH
+-- Compiling UDP PRIM_GDFF_HIGH_SCLR_PRIORITY
+
+Top level modules:
+	global
+	carry
+	cascade
+	carry_sum
+	exp
+	soft
+	opndrn
+	row_global
+	TRI
+	lut_input
+	lut_output
+	latch
+	dlatch
+	dff
+	dffe
+	dffea
+	dffeas
+	dffeas_pr
+	tff
+	tffe
+	jkff
+	jkffe
+	srff
+	srffe
+	clklock
+	alt_inbuf
+	alt_outbuf
+	alt_outbuf_tri
+	alt_iobuf
+	alt_inbuf_diff
+	alt_outbuf_diff
+	alt_outbuf_tri_diff
+	alt_iobuf_diff
+	alt_bidir_diff
+	alt_bidir_buf
+
+} {} {}} I:/Keccak/KTSNCLab/Lab2/romC_128x1.v {1 {vlog -work work -vopt -stats=none I:/Keccak/KTSNCLab/Lab2/romC_128x1.v
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module romC_128x1
+
+Top level modules:
+	romC_128x1
+
+} {} {}} I:/Keccak/KTSNCLab/Lab2/multiplier_8816.v {1 {vlog -work work -vopt -stats=none I:/Keccak/KTSNCLab/Lab2/multiplier_8816.v
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module multiplier_8816
+
+Top level modules:
+	multiplier_8816
+
+} {} {}} I:/Keccak/KTSNCLab/Lab2/matrix_multiply.sv {1 {vlog -work work -vopt -sv -stats=none I:/Keccak/KTSNCLab/Lab2/matrix_multiply.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module ChipInterface
+
+Top level modules:
+	ChipInterface
+
+} {} {}} I:/Keccak/KTSNCLab/Lab2/simlib/sgate.v {1 {vlog -work work -vopt -stats=none I:/Keccak/KTSNCLab/Lab2/simlib/sgate.v
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module oper_add
+-- Compiling module oper_addsub
+-- Compiling module mux21
+-- Compiling module io_buf_tri
+-- Compiling module io_buf_opdrn
+-- Compiling module oper_mult
+-- Compiling module tri_bus
+-- Compiling module oper_div
+-- Compiling module oper_mod
+-- Compiling module oper_left_shift
+-- Compiling module oper_right_shift
+-- Compiling module oper_rotate_left
+-- Compiling module oper_rotate_right
+-- Compiling module oper_less_than
+-- Compiling module oper_mux
+-- Compiling module oper_selector
+-- Compiling module oper_decoder
+-- Compiling module oper_bus_mux
+-- Compiling module oper_latch
+
+Top level modules:
+	oper_add
+	oper_addsub
+	mux21
+	io_buf_tri
+	io_buf_opdrn
+	oper_mult
+	tri_bus
+	oper_div
+	oper_mod
+	oper_left_shift
+	oper_right_shift
+	oper_rotate_left
+	oper_rotate_right
+	oper_less_than
+	oper_mux
+	oper_selector
+	oper_decoder
+	oper_bus_mux
+	oper_latch
+
+} {} {}} I:/Keccak/KTSNCLab/Lab2/romA_128x128.v {1 {vlog -work work -vopt -stats=none I:/Keccak/KTSNCLab/Lab2/romA_128x128.v
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module romA_128x128
+
+Top level modules:
+	romA_128x128
+
+} {} {}} I:/Keccak/KTSNCLab/Lab2/simlib/220model.v {1 {vlog -work work -vopt -stats=none I:/Keccak/KTSNCLab/Lab2/simlib/220model.v
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module LPM_MEMORY_INITIALIZATION
+-- Compiling module LPM_HINT_EVALUATION
+-- Compiling module LPM_DEVICE_FAMILIES
+-- Compiling module lpm_constant
+-- Compiling module lpm_inv
+-- Compiling module lpm_and
+-- Compiling module lpm_or
+-- Compiling module lpm_xor
+-- Compiling module lpm_bustri
+-- Compiling module lpm_mux
+-- Compiling module lpm_decode
+-- Compiling module lpm_clshift
+-- Compiling module lpm_add_sub
+-- Compiling module lpm_compare
+-- Compiling module lpm_mult
+-- Compiling module lpm_divide
+-- Compiling module lpm_abs
+-- Compiling module lpm_counter
+-- Compiling module lpm_latch
+-- Compiling module lpm_ff
+-- Compiling module lpm_shiftreg
+-- Compiling module lpm_ram_dq
+-- Compiling module lpm_ram_dp
+-- Compiling module lpm_ram_io
+-- Compiling module lpm_rom
+-- Compiling module lpm_fifo
+-- Compiling module lpm_fifo_dc_dffpipe
+-- Compiling module lpm_fifo_dc_fefifo
+-- Compiling module lpm_fifo_dc_async
+-- Compiling module lpm_fifo_dc
+-- Compiling module lpm_inpad
+-- Compiling module lpm_outpad
+-- Compiling module lpm_bipad
+
+Top level modules:
+	lpm_constant
+	lpm_inv
+	lpm_and
+	lpm_or
+	lpm_xor
+	lpm_bustri
+	lpm_mux
+	lpm_decode
+	lpm_clshift
+	lpm_add_sub
+	lpm_compare
+	lpm_mult
+	lpm_divide
+	lpm_abs
+	lpm_counter
+	lpm_latch
+	lpm_ff
+	lpm_shiftreg
+	lpm_ram_dq
+	lpm_ram_dp
+	lpm_ram_io
+	lpm_rom
+	lpm_fifo
+	lpm_fifo_dc
+	lpm_inpad
+	lpm_outpad
+	lpm_bipad
+
+} {} {}} I:/Keccak/KTSNCLab/Lab2/p2.sv {2 {vlog -work work -vopt -sv -stats=none I:/Keccak/KTSNCLab/Lab2/p2.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Demux32to128
+** Warning: I:/Keccak/KTSNCLab/Lab2/p2.sv(10): (vlog-13314) Defaulting port 'in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: I:/Keccak/KTSNCLab/Lab2/p2.sv(11): (vlog-13314) Defaulting port 'sel' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module RegLayer128Row
+** Warning: I:/Keccak/KTSNCLab/Lab2/p2.sv(37): (vlog-13314) Defaulting port 'reg_rom_vals' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: I:/Keccak/KTSNCLab/Lab2/p2.sv(38): (vlog-13314) Defaulting port 'row_val' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module RowReaderA
+-- Compiling module RowReaderBC
+-- Compiling module RowCounter
+-- Compiling module ComputeYi
+** Warning: I:/Keccak/KTSNCLab/Lab2/p2.sv(300): (vlog-13314) Defaulting port 'row_valsA' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: I:/Keccak/KTSNCLab/Lab2/p2.sv(300): (vlog-13314) Defaulting port 'row_valsB' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: I:/Keccak/KTSNCLab/Lab2/p2.sv(301): (vlog-13314) Defaulting port 'row_valsCin' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module ComputeCtoAdd
+** Warning: I:/Keccak/KTSNCLab/Lab2/p2.sv(498): (vlog-13314) Defaulting port 'inC' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module Reg9layers
+-- Compiling module top
+-- Compiling module MyFSM
+
+Top level modules:
+	MyFSM
+
+} {} {}} I:/Keccak/KTSNCLab/Lab2/simlib/cyclonev_atoms.v {1 {vlog -work work -vopt -stats=none I:/Keccak/KTSNCLab/Lab2/simlib/cyclonev_atoms.v
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling UDP CYCLONEV_PRIM_DFFE
+-- Compiling UDP CYCLONEV_PRIM_DFFEAS
+-- Compiling UDP CYCLONEV_PRIM_DFFEAS_HIGH
+-- Compiling module cyclonev_dffe
+-- Compiling module cyclonev_mux21
+-- Compiling module cyclonev_mux41
+-- Compiling module cyclonev_and1
+-- Compiling module cyclonev_and16
+-- Compiling module cyclonev_bmux21
+-- Compiling module cyclonev_b17mux21
+-- Compiling module cyclonev_nmux21
+-- Compiling module cyclonev_b5mux21
+-- Compiling module cyclonev_ff
+-- Compiling module cyclonev_lcell_comb
+-- Compiling module cyclonev_routing_wire
+-- Compiling module cyclonev_ram_block
+-- Compiling module cyclonev_mlab_cell
+-- Compiling module cyclonev_io_ibuf
+-- Compiling module cyclonev_io_obuf
+-- Compiling module cyclonev_ddio_out
+-- Compiling module cyclonev_ddio_oe
+-- Compiling module cyclonev_ddio_in
+-- Compiling module cyclonev_io_pad
+-- Compiling module cyclonev_pseudo_diff_out
+-- Compiling module cyclonev_bias_logic
+-- Compiling module cyclonev_bias_generator
+-- Compiling module cyclonev_bias_block
+-- Compiling module cyclonev_clk_phase_select
+-- Compiling module cyclonev_clkena
+-- Compiling module cyclonev_clkselect
+-- Compiling module cyclonev_delay_chain
+-- Compiling module cyclonev_dll_offset_ctrl
+-- Compiling module cyclonev_dll
+-- Compiling module cyclonev_dqs_config
+-- Compiling module cyclonev_dqs_delay_chain
+-- Compiling module cyclonev_dqs_enable_ctrl
+-- Compiling module cyclonev_duty_cycle_adjustment
+-- Compiling module cyclonev_fractional_pll
+-- Compiling module cyclonev_half_rate_input
+-- Compiling module cyclonev_input_phase_alignment
+-- Compiling module cyclonev_io_clock_divider
+-- Compiling module cyclonev_io_config
+-- Compiling module cyclonev_leveling_delay_chain
+-- Compiling module cyclonev_pll_dll_output
+-- Compiling module cyclonev_pll_dpa_output
+-- Compiling module cyclonev_pll_extclk_output
+-- Compiling module cyclonev_pll_lvds_output
+-- Compiling module cyclonev_pll_output_counter
+-- Compiling module cyclonev_pll_reconfig
+-- Compiling module cyclonev_pll_refclk_select
+-- Compiling module cyclonev_termination_logic
+-- Compiling module cyclonev_termination
+-- Compiling module cyclonev_asmiblock
+-- Compiling module cyclonev_chipidblock
+-- Compiling module cyclonev_controller
+-- Compiling module cyclonev_crcblock
+-- Compiling module cyclonev_jtag
+-- Compiling module cyclonev_prblock
+-- Compiling module cyclonev_rublock
+-- Compiling module cyclonev_tsdblock
+-- Compiling module cyclonev_read_fifo
+-- Compiling module cyclonev_read_fifo_read_enable
+-- Compiling module cyclonev_phy_clkbuf
+-- Compiling module cyclonev_ir_fifo_userdes
+-- Compiling module cyclonev_read_fifo_read_clock_select
+-- Compiling module cyclonev_lfifo
+-- Compiling module cyclonev_vfifo
+-- Compiling module cyclonev_mac
+-- Compiling module cyclonev_mem_phy
+-- Compiling module cyclonev_oscillator
+-- Compiling module cyclonev_hps_interface_fpga2sdram
+
+Top level modules:
+	cyclonev_dffe
+	cyclonev_mux41
+	cyclonev_and1
+	cyclonev_and16
+	cyclonev_bmux21
+	cyclonev_b17mux21
+	cyclonev_nmux21
+	cyclonev_b5mux21
+	cyclonev_ff
+	cyclonev_lcell_comb
+	cyclonev_routing_wire
+	cyclonev_ram_block
+	cyclonev_mlab_cell
+	cyclonev_io_ibuf
+	cyclonev_io_obuf
+	cyclonev_ddio_out
+	cyclonev_ddio_oe
+	cyclonev_ddio_in
+	cyclonev_io_pad
+	cyclonev_pseudo_diff_out
+	cyclonev_bias_block
+	cyclonev_clk_phase_select
+	cyclonev_clkena
+	cyclonev_clkselect
+	cyclonev_delay_chain
+	cyclonev_dll_offset_ctrl
+	cyclonev_dll
+	cyclonev_dqs_config
+	cyclonev_dqs_delay_chain
+	cyclonev_dqs_enable_ctrl
+	cyclonev_duty_cycle_adjustment
+	cyclonev_fractional_pll
+	cyclonev_half_rate_input
+	cyclonev_input_phase_alignment
+	cyclonev_io_clock_divider
+	cyclonev_io_config
+	cyclonev_leveling_delay_chain
+	cyclonev_pll_dll_output
+	cyclonev_pll_dpa_output
+	cyclonev_pll_extclk_output
+	cyclonev_pll_lvds_output
+	cyclonev_pll_output_counter
+	cyclonev_pll_reconfig
+	cyclonev_pll_refclk_select
+	cyclonev_termination_logic
+	cyclonev_termination
+	cyclonev_asmiblock
+	cyclonev_chipidblock
+	cyclonev_controller
+	cyclonev_crcblock
+	cyclonev_jtag
+	cyclonev_prblock
+	cyclonev_rublock
+	cyclonev_tsdblock
+	cyclonev_read_fifo
+	cyclonev_read_fifo_read_enable
+	cyclonev_phy_clkbuf
+	cyclonev_ir_fifo_userdes
+	cyclonev_read_fifo_read_clock_select
+	cyclonev_lfifo
+	cyclonev_vfifo
+	cyclonev_mac
+	cyclonev_mem_phy
+	cyclonev_oscillator
+	cyclonev_hps_interface_fpga2sdram
+
+} {} {}}

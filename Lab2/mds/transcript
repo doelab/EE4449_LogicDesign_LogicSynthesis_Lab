@@ -1,0 +1,287 @@
+# Load canceled
+# Compile of library.sv was successful.
+# Compile of matrix_multiply.sv was successful.
+# Compile of multiplier_8816.v was successful.
+# Compile of p2.sv was successful with warnings.
+# Compile of romA_128x128.v was successful.
+# Compile of romB_128x1.v was successful.
+# Compile of romC_128x1.v was successful.
+# Compile of TB.sv was successful.
+# Compile of 220model.v was successful.
+# Compile of altera_mf.v was successful.
+# Compile of altera_primitives.v was successful.
+# Compile of cyclonev_atoms.v was successful.
+# Compile of sgate.v was successful.
+# 13 compiles, 0 failed with no errors.
+vsim work.TB -voptargs=+acc
+# vsim work.TB -voptargs="+acc" 
+# Start time: 00:33:58 on Sep 05,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: I:/Keccak/KTSNCLab/Lab2/romA_128x128.v(69): (vopt-2685) [TFMPC] - Too few port connections for 'altsyncram_component'.  Expected 23, found 22.
+# ** Warning: I:/Keccak/KTSNCLab/Lab2/romA_128x128.v(69): (vopt-2718) [TFMPC] - Missing connection for port 'clock1'.
+# ** Note: (vopt-143) Recognized 1 FSM in module "MyFSM(fast)".
+# ** Warning: I:/Keccak/KTSNCLab/Lab2/multiplier_8816.v(51): (vopt-2685) [TFMPC] - Too few port connections for 'lpm_mult_component'.  Expected 8, found 7.
+# ** Warning: I:/Keccak/KTSNCLab/Lab2/multiplier_8816.v(51): (vopt-2718) [TFMPC] - Missing connection for port 'sclr'.
+# ** Warning: I:/Keccak/KTSNCLab/Lab2/p2.sv(300): (vopt-13314) Defaulting port 'row_valsA' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: I:/Keccak/KTSNCLab/Lab2/p2.sv(300): (vopt-13314) Defaulting port 'row_valsB' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: I:/Keccak/KTSNCLab/Lab2/p2.sv(301): (vopt-13314) Defaulting port 'row_valsCin' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: I:/Keccak/KTSNCLab/Lab2/p2.sv(37): (vopt-13314) Defaulting port 'reg_rom_vals' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: I:/Keccak/KTSNCLab/Lab2/p2.sv(38): (vopt-13314) Defaulting port 'row_val' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: I:/Keccak/KTSNCLab/Lab2/p2.sv(37): (vopt-13314) Defaulting port 'reg_rom_vals' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: I:/Keccak/KTSNCLab/Lab2/p2.sv(38): (vopt-13314) Defaulting port 'row_val' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: I:/Keccak/KTSNCLab/Lab2/p2.sv(37): (vopt-13314) Defaulting port 'reg_rom_vals' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: I:/Keccak/KTSNCLab/Lab2/p2.sv(38): (vopt-13314) Defaulting port 'row_val' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: I:/Keccak/KTSNCLab/Lab2/p2.sv(10): (vopt-13314) Defaulting port 'in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: I:/Keccak/KTSNCLab/Lab2/p2.sv(11): (vopt-13314) Defaulting port 'sel' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: I:/Keccak/KTSNCLab/Lab2/p2.sv(10): (vopt-13314) Defaulting port 'in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: I:/Keccak/KTSNCLab/Lab2/p2.sv(11): (vopt-13314) Defaulting port 'sel' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: I:/Keccak/KTSNCLab/Lab2/p2.sv(10): (vopt-13314) Defaulting port 'in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: I:/Keccak/KTSNCLab/Lab2/p2.sv(11): (vopt-13314) Defaulting port 'sel' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: I:/Keccak/KTSNCLab/Lab2/p2.sv(498): (vopt-13314) Defaulting port 'inC' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=20.
+# Loading sv_std.std
+# Loading work.TB(fast)
+# Loading work.ChipInterface(fast)
+# Loading work.MyFSM(fast)
+# Loading work.top(fast)
+# Loading work.CounterFromD(fast)
+# Loading work.MagComp(fast)
+# Loading work.RowCounter(fast)
+# Loading work.Reg9layers(fast)
+# Loading work.Register(fast)
+# Loading work.RowReaderA(fast)
+# Loading work.Mux4to1(fast)
+# Loading work.Register(fast__1)
+# Loading work.romA_128x128(fast)
+# Loading work.altsyncram(fast)
+# Loading work.altsyncram_body(fast)
+# Loading work.ALTERA_DEVICE_FAMILIES(fast)
+# Loading work.ALTERA_MF_MEMORY_INITIALIZATION(fast)
+# Loading work.Register(fast__2)
+# Loading work.Demux32to128(fast)
+# Loading work.RegLayer128Row(fast)
+# Loading work.RowReaderBC(fast)
+# Loading work.Mux4to1(fast__1)
+# Loading work.Register(fast__3)
+# Loading work.romB_128x1(fast)
+# Loading work.altsyncram(fast__1)
+# Loading work.altsyncram_body(fast__1)
+# Loading work.Demux32to128(fast__1)
+# Loading work.RegLayer128Row(fast__1)
+# Loading work.RowReaderBC(fast__1)
+# Loading work.romC_128x1(fast)
+# Loading work.altsyncram(fast__2)
+# Loading work.altsyncram_body(fast__2)
+# Loading work.Register(fast__4)
+# Loading work.Demux32to128(fast__2)
+# Loading work.RegLayer128Row(fast__2)
+# Loading work.ComputeYi(fast)
+# Loading work.ComputeCtoAdd(fast)
+# Loading work.Adder(fast)
+# Loading work.Register(fast__5)
+# Loading work.multiplier_8816(fast)
+# Loading work.lpm_mult(fast)
+# Loading work.LPM_HINT_EVALUATION(fast)
+# Loading work.Adder(fast__1)
+# Loading work.Adder(fast__2)
+# Loading work.Register(fast__6)
+# Loading work.Adder(fast__3)
+# Loading work.Register(fast__7)
+# Loading work.Adder(fast__4)
+# Loading work.Adder(fast__5)
+# Loading work.Register(fast__8)
+# Loading work.Adder(fast__6)
+# Loading work.Adder(fast__7)
+# Loading work.Mux2to1(fast)
+# Loading work.Adder(fast__8)
+# Loading work.Register(fast__9)
+# Loading work.CounterFromD(fast__1)
+# Loading work.SevenSegmentControl(fast)
+# Loading work.SevenSegmentDigit(fast)
+# Loading work.BCDtoSevenSegment(fast)
+add wave -position insertpoint sim:/TB/dut/dut/t/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Admin  Hostname: DESKTOP-NMM4PSV  ProcessID: 18932
+#           Attempting to use alternate WLF file "./wlftj0gtmw".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftj0gtmw
+run -all
+# @5235: Finished!
+# @5235: The sum is 206d3d
+# ** Note: $finish    : I:/Keccak/KTSNCLab/Lab2/TB.sv(40)
+#    Time: 5245 ps  Iteration: 0  Instance: /TB
+# 1
+# Break in Module TB at I:/Keccak/KTSNCLab/Lab2/TB.sv line 40
+run
+# @10000: Error timeout!
+# ** Note: $finish    : I:/Keccak/KTSNCLab/Lab2/TB.sv(24)
+#    Time: 10 ns  Iteration: 0  Instance: /TB
+# 1
+# Break in Module TB at I:/Keccak/KTSNCLab/Lab2/TB.sv line 24
+# Compile of library.sv was successful.
+# Compile of matrix_multiply.sv was successful.
+# Compile of multiplier_8816.v was successful.
+# Compile of p2.sv was successful with warnings.
+# Compile of romA_128x128.v was successful.
+# Compile of romB_128x1.v was successful.
+# Compile of romC_128x1.v was successful.
+# Compile of TB.sv was successful.
+# Compile of 220model.v was successful.
+# Compile of altera_mf.v was successful.
+# Compile of altera_primitives.v was successful.
+# Compile of cyclonev_atoms.v was successful.
+# Compile of sgate.v was successful.
+# 13 compiles, 0 failed with no errors.
+quit -sim
+# End time: 00:40:02 on Sep 05,2023, Elapsed time: 0:06:04
+# Errors: 0, Warnings: 25
+vsim -voptargs=+acc work.TB
+# vsim -voptargs="+acc" work.TB 
+# Start time: 00:40:07 on Sep 05,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "MyFSM(fast)".
+# Loading sv_std.std
+# Loading work.TB(fast)
+# Loading work.ChipInterface(fast)
+# Loading work.MyFSM(fast)
+# Loading work.top(fast)
+# Loading work.CounterFromD(fast)
+# Loading work.MagComp(fast)
+# Loading work.RowCounter(fast)
+# Loading work.Reg9layers(fast)
+# Loading work.Register(fast)
+# Loading work.RowReaderA(fast)
+# Loading work.Mux4to1(fast)
+# Loading work.Register(fast__1)
+# Loading work.romA_128x128(fast)
+# Loading work.altsyncram(fast)
+# Loading work.altsyncram_body(fast)
+# Loading work.ALTERA_DEVICE_FAMILIES(fast)
+# Loading work.ALTERA_MF_MEMORY_INITIALIZATION(fast)
+# Loading work.Register(fast__2)
+# Loading work.Demux32to128(fast)
+# Loading work.RegLayer128Row(fast)
+# Loading work.RowReaderBC(fast)
+# Loading work.Mux4to1(fast__1)
+# Loading work.Register(fast__3)
+# Loading work.romB_128x1(fast)
+# Loading work.altsyncram(fast__1)
+# Loading work.altsyncram_body(fast__1)
+# Loading work.Demux32to128(fast__1)
+# Loading work.RegLayer128Row(fast__1)
+# Loading work.RowReaderBC(fast__1)
+# Loading work.romC_128x1(fast)
+# Loading work.altsyncram(fast__2)
+# Loading work.altsyncram_body(fast__2)
+# Loading work.Register(fast__4)
+# Loading work.Demux32to128(fast__2)
+# Loading work.RegLayer128Row(fast__2)
+# Loading work.ComputeYi(fast)
+# Loading work.ComputeCtoAdd(fast)
+# Loading work.Adder(fast)
+# Loading work.Register(fast__5)
+# Loading work.multiplier_8816(fast)
+# Loading work.lpm_mult(fast)
+# Loading work.LPM_HINT_EVALUATION(fast)
+# Loading work.Adder(fast__1)
+# Loading work.Adder(fast__2)
+# Loading work.Register(fast__6)
+# Loading work.Adder(fast__3)
+# Loading work.Register(fast__7)
+# Loading work.Adder(fast__4)
+# Loading work.Adder(fast__5)
+# Loading work.Register(fast__8)
+# Loading work.Adder(fast__6)
+# Loading work.Adder(fast__7)
+# Loading work.Mux2to1(fast)
+# Loading work.Adder(fast__8)
+# Loading work.Register(fast__9)
+# Loading work.CounterFromD(fast__1)
+# Loading work.SevenSegmentControl(fast)
+# Loading work.SevenSegmentDigit(fast)
+# Loading work.BCDtoSevenSegment(fast)
+run -all
+# @5235: Finished!
+# @5235: The sum is 206d3d
+# ** Note: $finish    : I:/Keccak/KTSNCLab/Lab2/TB.sv(40)
+#    Time: 5245 ps  Iteration: 0  Instance: /TB
+# 1
+# Break in Module TB at I:/Keccak/KTSNCLab/Lab2/TB.sv line 40
+add wave -position insertpoint sim:/TB/dut/dut/Somethingwrongwithram/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Admin  Hostname: DESKTOP-NMM4PSV  ProcessID: 18932
+#           Attempting to use alternate WLF file "./wlftw81kfy".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftw81kfy
+add wave -position insertpoint sim:/TB/dut/dut/Somethingwrongwithram/*
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.TB(fast)
+# Loading work.ChipInterface(fast)
+# Loading work.MyFSM(fast)
+# Loading work.top(fast)
+# Loading work.CounterFromD(fast)
+# Loading work.MagComp(fast)
+# Loading work.RowCounter(fast)
+# Loading work.Reg9layers(fast)
+# Loading work.Register(fast)
+# Loading work.RowReaderA(fast)
+# Loading work.Mux4to1(fast)
+# Loading work.Register(fast__1)
+# Loading work.romA_128x128(fast)
+# Loading work.altsyncram(fast)
+# Loading work.altsyncram_body(fast)
+# Loading work.ALTERA_DEVICE_FAMILIES(fast)
+# Loading work.ALTERA_MF_MEMORY_INITIALIZATION(fast)
+# Loading work.Register(fast__2)
+# Loading work.Demux32to128(fast)
+# Loading work.RegLayer128Row(fast)
+# Loading work.RowReaderBC(fast)
+# Loading work.Mux4to1(fast__1)
+# Loading work.Register(fast__3)
+# Loading work.romB_128x1(fast)
+# Loading work.altsyncram(fast__1)
+# Loading work.altsyncram_body(fast__1)
+# Loading work.Demux32to128(fast__1)
+# Loading work.RegLayer128Row(fast__1)
+# Loading work.RowReaderBC(fast__1)
+# Loading work.romC_128x1(fast)
+# Loading work.altsyncram(fast__2)
+# Loading work.altsyncram_body(fast__2)
+# Loading work.Register(fast__4)
+# Loading work.Demux32to128(fast__2)
+# Loading work.RegLayer128Row(fast__2)
+# Loading work.ComputeYi(fast)
+# Loading work.ComputeCtoAdd(fast)
+# Loading work.Adder(fast)
+# Loading work.Register(fast__5)
+# Loading work.multiplier_8816(fast)
+# Loading work.lpm_mult(fast)
+# Loading work.LPM_HINT_EVALUATION(fast)
+# Loading work.Adder(fast__1)
+# Loading work.Adder(fast__2)
+# Loading work.Register(fast__6)
+# Loading work.Adder(fast__3)
+# Loading work.Register(fast__7)
+# Loading work.Adder(fast__4)
+# Loading work.Adder(fast__5)
+# Loading work.Register(fast__8)
+# Loading work.Adder(fast__6)
+# Loading work.Adder(fast__7)
+# Loading work.Mux2to1(fast)
+# Loading work.Adder(fast__8)
+# Loading work.Register(fast__9)
+# Loading work.CounterFromD(fast__1)
+# Loading work.SevenSegmentControl(fast)
+# Loading work.SevenSegmentDigit(fast)
+# Loading work.BCDtoSevenSegment(fast)
+run -all
+# @5235: Finished!
+# @5235: The sum is 206d3d
+# ** Note: $finish    : I:/Keccak/KTSNCLab/Lab2/TB.sv(40)
+#    Time: 5245 ps  Iteration: 0  Instance: /TB
+# 1
+# Break in Module TB at I:/Keccak/KTSNCLab/Lab2/TB.sv line 40
+# End time: 00:46:25 on Sep 05,2023, Elapsed time: 0:06:18
+# Errors: 0, Warnings: 1

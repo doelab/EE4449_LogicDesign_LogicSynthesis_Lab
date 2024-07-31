@@ -1,0 +1,6 @@
+
+State Machine - |p1|p1hwtb:ip1hwtb|state
+Name state.01 state.11 state.00 
+state.00 0 0 0 
+state.01 1 0 1 
+state.11 0 1 1 

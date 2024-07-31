@@ -1,0 +1,242 @@
+|p1
+CLOCK_50 => CLOCK_50.IN3
+KEY0 => KEY0.IN1
+KEY2 => KEY2.IN3
+LED0 << p1hwtb:ip1hwtb.L0
+HEX3[0] << bcdtohex:ibccdtohex4.segment
+HEX3[1] << bcdtohex:ibccdtohex4.segment
+HEX3[2] << bcdtohex:ibccdtohex4.segment
+HEX3[3] << bcdtohex:ibccdtohex4.segment
+HEX3[4] << bcdtohex:ibccdtohex4.segment
+HEX3[5] << bcdtohex:ibccdtohex4.segment
+HEX3[6] << bcdtohex:ibccdtohex4.segment
+HEX2[0] << bcdtohex:ibccdtohex3.segment
+HEX2[1] << bcdtohex:ibccdtohex3.segment
+HEX2[2] << bcdtohex:ibccdtohex3.segment
+HEX2[3] << bcdtohex:ibccdtohex3.segment
+HEX2[4] << bcdtohex:ibccdtohex3.segment
+HEX2[5] << bcdtohex:ibccdtohex3.segment
+HEX2[6] << bcdtohex:ibccdtohex3.segment
+HEX1[0] << bcdtohex:ibccdtohex2.segment
+HEX1[1] << bcdtohex:ibccdtohex2.segment
+HEX1[2] << bcdtohex:ibccdtohex2.segment
+HEX1[3] << bcdtohex:ibccdtohex2.segment
+HEX1[4] << bcdtohex:ibccdtohex2.segment
+HEX1[5] << bcdtohex:ibccdtohex2.segment
+HEX1[6] << bcdtohex:ibccdtohex2.segment
+HEX0[0] << bcdtohex:ibccdtohex1.segment
+HEX0[1] << bcdtohex:ibccdtohex1.segment
+HEX0[2] << bcdtohex:ibccdtohex1.segment
+HEX0[3] << bcdtohex:ibccdtohex1.segment
+HEX0[4] << bcdtohex:ibccdtohex1.segment
+HEX0[5] << bcdtohex:ibccdtohex1.segment
+HEX0[6] << bcdtohex:ibccdtohex1.segment
+
+
+|p1|p1hwtb:ip1hwtb
+clk => tbSum[0]~reg0.CLK
+clk => tbSum[1]~reg0.CLK
+clk => tbSum[2]~reg0.CLK
+clk => tbSum[3]~reg0.CLK
+clk => tbSum[4]~reg0.CLK
+clk => tbSum[5]~reg0.CLK
+clk => tbSum[6]~reg0.CLK
+clk => tbSum[7]~reg0.CLK
+clk => valueToinA[0]~reg0.CLK
+clk => valueToinA[1]~reg0.CLK
+clk => valueToinA[2]~reg0.CLK
+clk => valueToinA[3]~reg0.CLK
+clk => valueToinA[4]~reg0.CLK
+clk => valueToinA[5]~reg0.CLK
+clk => valueToinA[6]~reg0.CLK
+clk => valueToinA[7]~reg0.CLK
+clk => state~1.DATAIN
+reset_l => tbSum.OUTPUTSELECT
+reset_l => tbSum.OUTPUTSELECT
+reset_l => tbSum.OUTPUTSELECT
+reset_l => tbSum.OUTPUTSELECT
+reset_l => tbSum.OUTPUTSELECT
+reset_l => tbSum.OUTPUTSELECT
+reset_l => tbSum.OUTPUTSELECT
+reset_l => tbSum.OUTPUTSELECT
+reset_l => always1.IN1
+reset_l => state.OUTPUTSELECT
+reset_l => state.OUTPUTSELECT
+reset_l => state.OUTPUTSELECT
+Button0 => always0.IN1
+Button0 => always0.IN1
+valueToinA[0] <= valueToinA[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+valueToinA[1] <= valueToinA[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+valueToinA[2] <= valueToinA[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+valueToinA[3] <= valueToinA[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+valueToinA[4] <= valueToinA[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+valueToinA[5] <= valueToinA[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+valueToinA[6] <= valueToinA[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+valueToinA[7] <= valueToinA[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tbSum[0] <= tbSum[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tbSum[1] <= tbSum[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tbSum[2] <= tbSum[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tbSum[3] <= tbSum[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tbSum[4] <= tbSum[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tbSum[5] <= tbSum[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tbSum[6] <= tbSum[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tbSum[7] <= tbSum[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+go_l <= stateissum.DB_MAX_OUTPUT_PORT_TYPE
+L0 <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
+outResult[0] => Equal1.IN15
+outResult[1] => Equal1.IN14
+outResult[2] => Equal1.IN13
+outResult[3] => Equal1.IN12
+outResult[4] => Equal1.IN11
+outResult[5] => Equal1.IN10
+outResult[6] => Equal1.IN9
+outResult[7] => Equal1.IN8
+
+
+|p1|downstream:idownstream
+clk => downstream_out[0]~reg0.CLK
+clk => downstream_out[1]~reg0.CLK
+clk => downstream_out[2]~reg0.CLK
+clk => downstream_out[3]~reg0.CLK
+clk => downstream_out[4]~reg0.CLK
+clk => downstream_out[5]~reg0.CLK
+clk => downstream_out[6]~reg0.CLK
+clk => downstream_out[7]~reg0.CLK
+reset_l => downstream_out.OUTPUTSELECT
+reset_l => downstream_out.OUTPUTSELECT
+reset_l => downstream_out.OUTPUTSELECT
+reset_l => downstream_out.OUTPUTSELECT
+reset_l => downstream_out.OUTPUTSELECT
+reset_l => downstream_out.OUTPUTSELECT
+reset_l => downstream_out.OUTPUTSELECT
+reset_l => downstream_out.OUTPUTSELECT
+done => downstream_out.OUTPUTSELECT
+done => downstream_out.OUTPUTSELECT
+done => downstream_out.OUTPUTSELECT
+done => downstream_out.OUTPUTSELECT
+done => downstream_out.OUTPUTSELECT
+done => downstream_out.OUTPUTSELECT
+done => downstream_out.OUTPUTSELECT
+done => downstream_out.OUTPUTSELECT
+downstream_in[0] => downstream_out.DATAB
+downstream_in[1] => downstream_out.DATAB
+downstream_in[2] => downstream_out.DATAB
+downstream_in[3] => downstream_out.DATAB
+downstream_in[4] => downstream_out.DATAB
+downstream_in[5] => downstream_out.DATAB
+downstream_in[6] => downstream_out.DATAB
+downstream_in[7] => downstream_out.DATAB
+downstream_out[0] <= downstream_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+downstream_out[1] <= downstream_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+downstream_out[2] <= downstream_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+downstream_out[3] <= downstream_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+downstream_out[4] <= downstream_out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+downstream_out[5] <= downstream_out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+downstream_out[6] <= downstream_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+downstream_out[7] <= downstream_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|p1|sumitup:isumitup
+clk => sum[0]~reg0.CLK
+clk => sum[1]~reg0.CLK
+clk => sum[2]~reg0.CLK
+clk => sum[3]~reg0.CLK
+clk => sum[4]~reg0.CLK
+clk => sum[5]~reg0.CLK
+clk => sum[6]~reg0.CLK
+clk => sum[7]~reg0.CLK
+clk => state.CLK
+reset_l => state.OUTPUTSELECT
+reset_l => sum.OUTPUTSELECT
+reset_l => sum.OUTPUTSELECT
+reset_l => sum.OUTPUTSELECT
+reset_l => sum.OUTPUTSELECT
+reset_l => sum.OUTPUTSELECT
+reset_l => sum.OUTPUTSELECT
+reset_l => sum.OUTPUTSELECT
+reset_l => sum.OUTPUTSELECT
+go_l => ld_l.IN1
+go_l => always0.IN1
+inA[0] => Add0.IN8
+inA[0] => Equal0.IN31
+inA[1] => Add0.IN7
+inA[1] => Equal0.IN30
+inA[2] => Add0.IN6
+inA[2] => Equal0.IN29
+inA[3] => Add0.IN5
+inA[3] => Equal0.IN28
+inA[4] => Add0.IN4
+inA[4] => Equal0.IN27
+inA[5] => Add0.IN3
+inA[5] => Equal0.IN26
+inA[6] => Add0.IN2
+inA[6] => Equal0.IN25
+inA[7] => Add0.IN1
+inA[7] => Equal0.IN24
+done <= done.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sum[1] <= sum[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sum[2] <= sum[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sum[3] <= sum[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sum[4] <= sum[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sum[5] <= sum[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sum[6] <= sum[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sum[7] <= sum[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|p1|bcdtohex:ibccdtohex1
+bcd[0] => Decoder0.IN3
+bcd[1] => Decoder0.IN2
+bcd[2] => Decoder0.IN1
+bcd[3] => Decoder0.IN0
+segment[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segment[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|p1|bcdtohex:ibccdtohex2
+bcd[0] => Decoder0.IN3
+bcd[1] => Decoder0.IN2
+bcd[2] => Decoder0.IN1
+bcd[3] => Decoder0.IN0
+segment[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segment[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|p1|bcdtohex:ibccdtohex3
+bcd[0] => Decoder0.IN3
+bcd[1] => Decoder0.IN2
+bcd[2] => Decoder0.IN1
+bcd[3] => Decoder0.IN0
+segment[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segment[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|p1|bcdtohex:ibccdtohex4
+bcd[0] => Decoder0.IN3
+bcd[1] => Decoder0.IN2
+bcd[2] => Decoder0.IN1
+bcd[3] => Decoder0.IN0
+segment[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segment[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

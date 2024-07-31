@@ -1,0 +1,577 @@
+Analysis & Synthesis report for lab1
+Mon Sep  4 16:04:20 2023
+Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |p1|p1hwtb:ip1hwtb|state
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: p1hwtb:ip1hwtb
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2021  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon Sep  4 16:04:20 2023       ;
+; Quartus Prime Version           ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
+; Revision Name                   ; lab1                                        ;
+; Top-level Entity Name           ; p1                                          ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 35                                          ;
+; Total pins                      ; 32                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
+; Top-level entity name                                                           ; p1                 ; lab1               ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ;   0.1%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                              ;
++----------------------------------+-----------------+------------------------------+---------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path          ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------+---------+
+; ../p1hwtb.sv                     ; yes             ; User SystemVerilog HDL File  ; I:/Keccak/KTSNCLab/Lab1/p1hwtb.sv     ;         ;
+; ../sumitup.sv                    ; yes             ; User SystemVerilog HDL File  ; I:/Keccak/KTSNCLab/Lab1/sumitup.sv    ;         ;
+; ../p1.sv                         ; yes             ; User SystemVerilog HDL File  ; I:/Keccak/KTSNCLab/Lab1/p1.sv         ;         ;
+; ../downstream.sv                 ; yes             ; User SystemVerilog HDL File  ; I:/Keccak/KTSNCLab/Lab1/downstream.sv ;         ;
+; ../bcdtohex.sv                   ; yes             ; User SystemVerilog HDL File  ; I:/Keccak/KTSNCLab/Lab1/bcdtohex.sv   ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 43             ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 73             ;
+;     -- 7 input functions                    ; 0              ;
+;     -- 6 input functions                    ; 12             ;
+;     -- 5 input functions                    ; 3              ;
+;     -- 4 input functions                    ; 30             ;
+;     -- <=3 input functions                  ; 28             ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 35             ;
+;                                             ;                ;
+; I/O pins                                    ; 32             ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 35             ;
+; Total fan-out                               ; 460            ;
+; Average fan-out                             ; 2.67           ;
++---------------------------------------------+----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                            ;
++-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------+-------------+--------------+
+; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name        ; Entity Name ; Library Name ;
++-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------+-------------+--------------+
+; |p1                         ; 73 (0)              ; 35 (0)                    ; 0                 ; 0          ; 32   ; 0            ; |p1                        ; p1          ; work         ;
+;    |bcdtohex:ibccdtohex1|   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |p1|bcdtohex:ibccdtohex1   ; bcdtohex    ; work         ;
+;    |bcdtohex:ibccdtohex2|   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |p1|bcdtohex:ibccdtohex2   ; bcdtohex    ; work         ;
+;    |bcdtohex:ibccdtohex3|   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |p1|bcdtohex:ibccdtohex3   ; bcdtohex    ; work         ;
+;    |bcdtohex:ibccdtohex4|   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |p1|bcdtohex:ibccdtohex4   ; bcdtohex    ; work         ;
+;    |downstream:idownstream| ; 1 (1)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |p1|downstream:idownstream ; downstream  ; work         ;
+;    |p1hwtb:ip1hwtb|         ; 33 (33)             ; 18 (18)                   ; 0                 ; 0          ; 0    ; 0            ; |p1|p1hwtb:ip1hwtb         ; p1hwtb      ; work         ;
+;    |sumitup:isumitup|       ; 11 (11)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |p1|sumitup:isumitup       ; sumitup     ; work         ;
++-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------+
+; State Machine - |p1|p1hwtb:ip1hwtb|state  ;
++----------+----------+----------+----------+
+; Name     ; state.01 ; state.11 ; state.00 ;
++----------+----------+----------+----------+
+; state.00 ; 0        ; 0        ; 0        ;
+; state.01 ; 1        ; 0        ; 1        ;
+; state.11 ; 0        ; 1        ; 1        ;
++----------+----------+----------+----------+
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; p1hwtb:ip1hwtb|state.11               ; Lost fanout        ;
+; Total Number of Removed Registers = 1 ;                    ;
++---------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 35    ;
+; Number of registers using Synchronous Clear  ; 26    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 24    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |p1|p1hwtb:ip1hwtb|valueToinA[0]             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |p1|p1hwtb:ip1hwtb|valueToinA[2]             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |p1|downstream:idownstream|downstream_out[2] ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |p1|p1hwtb:ip1hwtb|tbSum[7]                  ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |p1|sumitup:isumitup|sum[7]                  ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 9 LEs                ; 0 LEs                  ; No         ; |p1|p1hwtb:ip1hwtb|state                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: p1hwtb:ip1hwtb ;
++----------------+----------+---------------------------------+
+; Parameter Name ; Value    ; Type                            ;
++----------------+----------+---------------------------------+
+; IDLE           ; 00       ; Unsigned Binary                 ;
+; SUM            ; 01       ; Unsigned Binary                 ;
+; DONE           ; 11       ; Unsigned Binary                 ;
+; SEED           ; 01111011 ; Unsigned Binary                 ;
++----------------+----------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 35                          ;
+;     ENA SCLR          ; 24                          ;
+;     SCLR              ; 2                           ;
+;     plain             ; 9                           ;
+; arriav_lcell_comb     ; 77                          ;
+;     arith             ; 24                          ;
+;         1 data inputs ; 8                           ;
+;         2 data inputs ; 16                          ;
+;     normal            ; 53                          ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 3                           ;
+;         4 data inputs ; 30                          ;
+;         5 data inputs ; 3                           ;
+;         6 data inputs ; 12                          ;
+; boundary_port         ; 32                          ;
+;                       ;                             ;
+; Max LUT depth         ; 2.70                        ;
+; Average LUT depth     ; 1.69                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+    Info: Processing started: Mon Sep  4 16:04:12 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab1 -c lab1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /keccak/ktsnclab/lab1/p1hwtb.sv
+    Info (12023): Found entity 1: p1hwtb File: I:/Keccak/KTSNCLab/Lab1/p1hwtb.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /keccak/ktsnclab/lab1/sumitup.sv
+    Info (12023): Found entity 1: sumitup File: I:/Keccak/KTSNCLab/Lab1/sumitup.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /keccak/ktsnclab/lab1/p1.sv
+    Info (12023): Found entity 1: p1 File: I:/Keccak/KTSNCLab/Lab1/p1.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /keccak/ktsnclab/lab1/downstream.sv
+    Info (12023): Found entity 1: downstream File: I:/Keccak/KTSNCLab/Lab1/downstream.sv Line: 1
+Info (12021): Found 2 design units, including 2 entities, in source file /keccak/ktsnclab/lab1/bcdtohex.sv
+    Info (12023): Found entity 1: bcdtohex File: I:/Keccak/KTSNCLab/Lab1/bcdtohex.sv Line: 3
+    Info (12023): Found entity 2: BCDtoSevenSegmentTest File: I:/Keccak/KTSNCLab/Lab1/bcdtohex.sv Line: 33
+Info (12127): Elaborating entity "p1" for the top level hierarchy
+Info (12128): Elaborating entity "p1hwtb" for hierarchy "p1hwtb:ip1hwtb" File: I:/Keccak/KTSNCLab/Lab1/p1.sv Line: 27
+Warning (10230): Verilog HDL assignment warning at p1hwtb.sv(56): truncated value with size 32 to match size of target (8) File: I:/Keccak/KTSNCLab/Lab1/p1hwtb.sv Line: 56
+Info (12128): Elaborating entity "downstream" for hierarchy "downstream:idownstream" File: I:/Keccak/KTSNCLab/Lab1/p1.sv Line: 38
+Info (12128): Elaborating entity "sumitup" for hierarchy "sumitup:isumitup" File: I:/Keccak/KTSNCLab/Lab1/p1.sv Line: 48
+Info (12128): Elaborating entity "bcdtohex" for hierarchy "bcdtohex:ibccdtohex1" File: I:/Keccak/KTSNCLab/Lab1/p1.sv Line: 58
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
+Warning (20013): Ignored 204 assignments for entity "DE10_Standard" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_CONVST -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_DIN -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_DOUT -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_SCLK -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_ADCDAT -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_ADCLRCK -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_BCLK -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_DACDAT -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_DACLRCK -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_XCK -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK2_50 -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to CLOCK3_50 -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK4_50 -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK_50 -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[0] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[10] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[11] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[12] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[1] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[2] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[3] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[4] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[5] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[6] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[7] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[8] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[9] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_BA[0] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_BA[1] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CAS_N -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CKE -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CLK -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CS_N -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[0] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[10] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[11] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[12] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[13] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[14] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[15] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[1] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[2] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[3] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[4] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[5] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[6] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[7] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[8] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[9] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_LDQM -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_RAS_N -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_UDQM -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_WE_N -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FPGA_I2C_SCLK -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FPGA_I2C_SDAT -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[0] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[10] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[11] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[12] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[13] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[14] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[15] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[16] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[17] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[18] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[19] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[1] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[20] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[21] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[22] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[23] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[24] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[25] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[26] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[27] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[28] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[29] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[2] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[30] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[31] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[32] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[33] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[34] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[35] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[3] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[4] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[5] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[6] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[7] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[8] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[9] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[0] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[1] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[2] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[3] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[4] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[5] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[6] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[0] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[1] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[2] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[3] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[4] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[5] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[6] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[0] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[1] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[2] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[3] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[4] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[5] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[6] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[0] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[1] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[2] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[3] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[4] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[5] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[6] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[0] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[1] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[2] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[3] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[4] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[5] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[6] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[0] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[1] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[2] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[3] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[4] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[5] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[6] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to IRDA_RXD -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to IRDA_TXD -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[0] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[1] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[2] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[3] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[0] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[1] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[2] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[3] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[4] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[5] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[6] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[7] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[8] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[9] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PS2_CLK -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PS2_CLK2 -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PS2_DAT -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PS2_DAT2 -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to SW[0] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to SW[1] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to SW[2] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to SW[3] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to SW[4] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to SW[5] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to SW[6] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to SW[7] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to SW[8] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to SW[9] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TD_CLK27 -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TD_DATA[0] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TD_DATA[1] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TD_DATA[2] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TD_DATA[3] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TD_DATA[4] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TD_DATA[5] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TD_DATA[6] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TD_DATA[7] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TD_HS -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TD_RESET_N -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TD_VS -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_BLANK_N -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[0] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[1] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[2] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[3] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[4] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[5] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[6] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[7] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_CLK -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[0] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[1] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[2] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[3] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[4] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[5] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[6] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[7] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_HS -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[0] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[1] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[2] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[3] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[4] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[5] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[6] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[7] -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_SYNC_N -entity DE10_Standard was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_VS -entity DE10_Standard was ignored
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 113 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 29 output pins
+    Info (21061): Implemented 81 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 207 warnings
+    Info: Peak virtual memory: 4875 megabytes
+    Info: Processing ended: Mon Sep  4 16:04:20 2023
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:05
+
+
