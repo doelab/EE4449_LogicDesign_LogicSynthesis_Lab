@@ -8,8 +8,8 @@ reg clk;
 reg reset;
 reg op_valid;
 reg [1:0] op_type;
-reg [15:0] a, b;
-wire [15:0] result;
+reg [18:0] a, b;
+wire [18:0] result;
 wire [4:0] flags;
 
 fpu_top dut(
@@ -39,15 +39,15 @@ initial begin
   // Test case 1
   op_valid = 1;
   op_type = 2'b00; // Add 
-  a = 16'b0100000000000001; // 1.25
-  b = 16'b0011111111111111; // 0.99
+  a = 18'b...; // 1.25
+  b = 18'b...; // 0.99
   #10;
   
   // Test case 2 
   op_valid = 1; 
   op_type = 2'b01; // Subtract
-  a = 16'b0100000000000100; // 4
-  b = 16'b0011111111111110; // -2
+  a = 18'b...; // 4
+  b = 18'b...; // -2
   #10;
 
   // Other test cases...

@@ -5,9 +5,9 @@ module fpu_top (
   input         reset,
   input         op_valid,
   input  [1:0]  op_type, // 00 - Add, 01 - Subtract, 10 - Multiply, 11 - Divide
-  input  [15:0] a,
-  input  [15:0] b,
-  output [15:0] result,
+  input  [18:0] a,
+  input  [18:0] b,
+  output [18:0] result,
   output [4:0]  flags 
 );
 
